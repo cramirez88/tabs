@@ -2,25 +2,21 @@ import React from 'react'
 
 
 const Tabs = (props) => {
-  const {tab, setTab} = props
+  
 
-  const handleTab = (index) => {
-    setTab({
-      ...tab,
-      tab: index
-  })
-  }
+
   return (
     <div>
-      {tab.content.map((t, index) => (
-        <div key={index} onClick={() => {handleTab(index)}}>Tab {index + 1}</div>
-      ))}
-      
-        <div>{tab.content[tab.tab]}</div>
-
+      <button>Tab 1</button>
+      <button>Tab 2</button>
+      <button>Tab 3</button>
     </div>
   )
 }
+
+  
+
+
 
 
 export default Tabs
