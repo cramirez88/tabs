@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 const Tabs = (props) => {
-  
+  const {tabsArray, setTabsArray, tabsContent, selectedTab, setSelectedTab} = props
+  // When we click on a tab, we want to switch the content. Currently it is in an array
+
 
 
   return (
     <div>
-      <button>Tab 1</button>
-      <button>Tab 2</button>
-      <button>Tab 3</button>
+    {tabsArray.map((tab, index) => (
+      <div onClick={() => {setSelectedTab(index)}} key={index}>Tab {tab.tab} </div>
+    ))}
     </div>
   )
 }
